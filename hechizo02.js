@@ -1,7 +1,14 @@
 const leer = require("prompt-sync")();
 
-const TOTAL_MATERIALES = function (varitas,libros ) {
-    return varitas*3 + libros*2;
+/**
+ * Calcula el total de materiales necesarios para una clase de hechizos.
+ * @param {number} cantVaritas - Cantidad de varitas que se necesitan.
+ * @param {number} cantidadLibros - Cantidad de libros que se necesitan.
+ * @returns {number} El total de materiales necesarios.
+ */
+
+function calculoMateriales (cantVaritas,cantidadLibros) {
+    return cantVaritas*3 + cantidadLibros*2;
 }
 
 function main(){
@@ -19,11 +26,8 @@ function main(){
     console.log("ingrese la cantidad de libros: ");
     cantidadLibros = Number(leer());
 
-    // calcular total de materiales
-    //totalMateriales= ((EstudiantesConVarita*3) + (cantidadLibros*2));
-    
     // calcular total de materiales con funcion piola
-    totalMateriales = TOTAL_MATERIALES(EstudiantesConVarita, cantidadLibros);
+    totalMateriales = calculoMateriales(EstudiantesConVarita, cantidadLibros);
 
 
     console.log("#### Resumen de materiales ####"+"\n");
