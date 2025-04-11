@@ -1,5 +1,8 @@
 const leer = require("prompt-sync")();
 
+const MULTIPLICADOR_VARITAS = 3;
+const MULTIPLICADOR_LIBROS = 2;
+
 /**
  * Calcula el total de materiales necesarios para una clase de hechizos.
  * @param {number} cantVaritas - Cantidad de varitas que se necesitan.
@@ -8,8 +11,18 @@ const leer = require("prompt-sync")();
  */
 
 function calculoMateriales (cantVaritas,cantidadLibros) {
-    return cantVaritas*3 + cantidadLibros*2;
+    return cantVaritas*MULTIPLICADOR_VARITAS + cantidadLibros*MULTIPLICADOR_LIBROS;
 }
+
+/**
+ * Calcula y muestra el total de materiales necesarios para una clase de hechizos.
+ * 
+ * Solicita al usuario el número de estudiantes, la cantidad de estudiantes con varita,
+ * y la cantidad de libros necesarios. Luego calcula el total de materiales usando la
+ * función `calculoMateriales` y muestra un resumen de los materiales.
+ * 
+ * @returns {void} No devuelve nada.
+ */
 
 function main(){
     // variables definidas e inicializadas
@@ -17,7 +30,7 @@ function main(){
     let EstudiantesConVarita = 0;
     let cantidadLibros = 0;
     let totalMateriales = 0;
-    
+
     // pedir datos al usuario
     console.log("ingrese la cantidad de estudiantes: ");
     cantidadEstudiantes = Number(leer());
@@ -30,7 +43,7 @@ function main(){
     totalMateriales = calculoMateriales(EstudiantesConVarita, cantidadLibros);
 
 
-    console.log("#### Resumen de materiales ####"+"\n");
+    console.log("\n\n#### Resumen de materiales ####\n");
     console.log("Estudiantes: " + cantidadEstudiantes);
     console.log("Estudiantes con varita: " + EstudiantesConVarita);
     console.log("Cantidad de libros: " + cantidadLibros+"\n");
