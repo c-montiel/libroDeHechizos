@@ -14,3 +14,9 @@ comprueba la cantidad adecuada de ingrediente principal y del tiempo de preparac
 Hechizo 04: verifica la edad minima requerida para comprar una varita o en su defecto la cantidad de años que todavia faltan
 
 Hechizo 05: Sombrero seleccionador que designa las casas  de pertenencia en relacion con los resultado numericos del examen de ingreso, y da la bienvenida a la casa.
+
+Hechizo 06: identifica la hierba presentada por el estudiante y autoriza a hacer la practica, o advierte si no se puede usar.
+
+Hechizo 07: permite conocer las caracteristicas y dificultad de una pocion consultada.
+
+Hechizo 08: pide el codigo de identificacion de un tipo de nucleo, e identifica sus caracteristicas.
