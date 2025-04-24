@@ -11,7 +11,7 @@ const MULTIPLICADOR_LIBROS = 2;
  */
 
 function calculoMateriales (cantVaritas,cantidadLibros) {
-    return cantVaritas*MULTIPLICADOR_VARITAS + cantidadLibros*MULTIPLICADOR_LIBROS;
+    return ((cantVaritas*MULTIPLICADOR_VARITAS) + (cantidadLibros*MULTIPLICADOR_LIBROS));
 }
 
 /**
@@ -27,28 +27,31 @@ function calculoMateriales (cantVaritas,cantidadLibros) {
 function main(){
     // variables definidas e inicializadas
     let cantidadEstudiantes = 0;
-    let EstudiantesConVarita = 0;
+    let cantidadVaritas = 0;
     let cantidadLibros = 0;
     let totalMateriales = 0;
 
     // pedir datos al usuario
+    console.log("Bienvenido! vamos a calcular la cantidad de materiales necesarios para esta clase");
+
     console.log("ingrese la cantidad de estudiantes: ");
     cantidadEstudiantes = Number(leer());
     console.log("ingrese la cantidad de estudiantes con varita: ");
-    EstudiantesConVarita = Number(leer());
+    cantidadVaritas = Number(leer());
     console.log("ingrese la cantidad de libros: ");
     cantidadLibros = Number(leer());
 
     // calcular total de materiales con funcion piola
-    totalMateriales = calculoMateriales(EstudiantesConVarita, cantidadLibros);
+    totalMateriales = calculoMateriales(cantidadVaritas, cantidadLibros);
 
 
     console.log("\n\n#### Resumen de materiales ####\n");
     console.log("Estudiantes: " + cantidadEstudiantes);
-    console.log("Estudiantes con varita: " + EstudiantesConVarita);
+    console.log("Estudiantes con varita: " + cantidadVaritas);
     console.log("Cantidad de libros: " + cantidadLibros+"\n");
     console.log("Total de materiales: " + totalMateriales);
-    
+    console.log("\n################################");
+
 };
 
 main();

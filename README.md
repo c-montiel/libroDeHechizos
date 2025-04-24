@@ -1,6 +1,6 @@
-** proyecto de ejercicios secuenciales "hechizos"
+*** proyecto de ejercicios "hechizos" ***
 
-** Hechizo 01: Calculos de ingredientes.
+Hechizo 01: Calculos de ingredientes.
 
 solicita ingreso de datos numericos y devuelve la suma de los mismos.
 
@@ -10,3 +10,7 @@ implementa funcion para calcular cantidad de materiales dependiendo de la cantid
 
 Hechizo 03: comprueba que una pocion sea apta para el consumo
 comprueba la cantidad adecuada de ingrediente principal y del tiempo de preparacion
+
+Hechizo 04: verifica la edad minima requerida para comprar una varita o en su defecto la cantidad de años que todavia faltan
+
+Hechizo 05: Sombrero seleccionador que designa las casas  de pertenencia en relacion con los resultado numericos del examen de ingreso, y da la bienvenida a la casa.

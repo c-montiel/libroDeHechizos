@@ -1,4 +1,13 @@
 const leer = require("prompt-sync")();
+
+/**
+ * Calcula el total de ingredientes necesarios para un hechizo.
+ * 
+ * Muestra un mensaje de bienvenida, solicita la cantidad de Escarabajos de Ojos de Tigre y de Raíces de Mandrágora 
+ * necesarias para el hechizo y muestra un resumen de la cantidad total de ingredientes
+ * 
+ * @returns {void} No devuelve nada.
+ */
 function main() {
     // variables definidas e inicializadas
     let cantidadEscarabajos = 0;
@@ -13,16 +22,17 @@ function main() {
 
     console.log("ingresa la cantidad necesaria de Raíces de Mandrágora: ");
     cantidadMandragora = Number(leer());
-    
-    totalIngredientes = cantidadEscarabajos + cantidadMandragora;
+
+    totalIngredientes = (cantidadEscarabajos + cantidadMandragora);
 
     // mensaje de salida
-    console.log("#### Resumen de ingredientes ####\n");
+    console.log("\n\n#### Resumen de ingredientes ####\n");
     console.log("Escarabajos de Ojos de Tigre: " + cantidadEscarabajos);
     console.log("Raíces de Mandrágora: " + cantidadMandragora);
     console.log("Total de ingredientes: " + totalIngredientes);
+    console.log("\n##################################");
     
-    
+
 }
 
 main();
