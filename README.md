@@ -1,4 +1,4 @@
-*** proyecto de ejercicios "hechizos" ***
+# proyecto de ejercicios "hechizos"
 
 Hechizo 01: Calculos de ingredientes.
 
@@ -20,3 +20,5 @@ Hechizo 06: identifica la hierba presentada por el estudiante y autoriza a hacer
 Hechizo 07: permite conocer las caracteristicas y dificultad de una pocion consultada.
 
 Hechizo 08: pide el codigo de identificacion de un tipo de nucleo, e identifica sus caracteristicas.
+
+Hechizo 09: pide el codigo para seleccionar el nivel y luego el codigo para seleccionar un hechizo especifico.

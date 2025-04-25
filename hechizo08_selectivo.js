@@ -1,29 +1,29 @@
 const leer = require('prompt-sync')();
 
-const NUCLEO00 = "FENIX";
-const NUCLEO01 = "UNICORNIO";
-const NUCLEO02 = "DRAGON";
+const NUCLEO_00 = "FENIX";
+const NUCLEO_01 = "UNICORNIO";
+const NUCLEO_02 = "DRAGON";
 
 const NUCLEO_ERROR = "INGRESO UN NUCLEO NO REGISTRADO"
 
-const CARACTERISTICA00 = "¡Excelente elección! Las varitas con núcleo de fénix son poderosas y leales.";
-const CARACTERISTICA01 = "Las varitas con núcleo de unicornio son conocidas por su pureza y fuerza.";
-const CARACTERISTICA02 = "¡Cuidado! Las varitas con núcleo de dragón son poderosas pero pueden ser temperamentales.";
+const CARACTERISTICA_00 = "¡Excelente elección! Las varitas con núcleo de fénix son poderosas y leales.";
+const CARACTERISTICA_01 = "Las varitas con núcleo de unicornio son conocidas por su pureza y fuerza.";
+const CARACTERISTICA_02 = "¡Cuidado! Las varitas con núcleo de dragón son poderosas pero pueden ser temperamentales.";
 
 const CARACTERISTICA_ERROR = "No reconocemos ese tipo de núcleo. Por favor, ingrese un núcleo válido.";
 
 /** 
- * Funcion que recibe 3 paramentros: opcion elegida; tipo de nucleo; y caracteristicas correspondientes. 
- * Devuelve mensaje de salida de texto
+ * Funcion "mensajeSalida" recibe 3 paramentros: opcion elegida; tipo de nucleo; y caracteristicas correspondientes. 
+ * Devuelve mensaje de texto
  * 
  * @param {* dato string variable} opcion 
  * @param {* dato string constante} nucleo 
  * @param {* dato string constante} caracteristica 
  */ 
 function mensajeSalida(opcion,nucleo,caracteristica){
-    console.log("\n\n*** Detalles de nucleo ["+opcion+"] "+nucleo+" ***\n");
-    console.log(caracteristica);
-    console.log("\n*** Fin del mensaje ***");
+    let intro = "\n\n*** Detalles de nucleo";
+    let cierre = "\n*** Fin del mensaje ***"
+    console.log( intro + " [" + opcion + "] " + nucleo + " ***\n\n", caracteristica,"\n" + cierre)
 };
 
 function main () {
@@ -33,17 +33,14 @@ function main () {
     
     switch (nucleoConsultado) {
         case ("0"):
-            mensajeSalida(nucleoConsultado,NUCLEO00,CARACTERISTICA00);
+            mensajeSalida(nucleoConsultado,NUCLEO_00,CARACTERISTICA_00);
             break;
-
         case ("1"):
-            mensajeSalida(nucleoConsultado,NUCLEO01,CARACTERISTICA01);
+            mensajeSalida(nucleoConsultado,NUCLEO_01,CARACTERISTICA_01);
             break;   
-            
         case ("2"):
-            mensajeSalida(nucleoConsultado,NUCLEO02,CARACTERISTICA02);
+            mensajeSalida(nucleoConsultado,NUCLEO_02,CARACTERISTICA_02);
             break;
-
         default:
             mensajeSalida(nucleoConsultado,NUCLEO_ERROR,CARACTERISTICA_ERROR);
             break;
