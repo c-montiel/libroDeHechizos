@@ -22,3 +22,4 @@ Hechizo 07: permite conocer las caracteristicas y dificultad de una pocion consu
 Hechizo 08: pide el codigo de identificacion de un tipo de nucleo, e identifica sus caracteristicas.
 
 Hechizo 09: pide el codigo para seleccionar el nivel y luego el codigo para seleccionar un hechizo especifico.
+Mejora optimizada y modularizada.

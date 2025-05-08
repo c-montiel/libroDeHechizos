@@ -3,11 +3,11 @@ const leer = require('prompt-sync')();
 const HIERBA_APTA_01 = "MANDRAGORA";
 const HIERBA_APTA_02 = "VALERIANA";
 const HIERBA_PELIGROSA_01 = "BUBOTUBER";
-const HIERBA_PELIGROSA_02 = "WHOMPING WILLOW"
+const HIERBA_PELIGROSA_02 = "WHOMPING WILLOW";
 
 const AUTORIZACION = "Buen ejemplar, toma asiento para iniciar el examen!";
 const ADVERTENCIA = "No es posible iniciar el examen con esta planta peligrosa!";
-const RECOMENDACION = "Equivocarse es algo comun cuando inicias, algunas hierbas se asemejan, es importante que puedas diferenciarlas para evitar accidentes"
+const RECOMENDACION = "Equivocarse es algo comun cuando inicias, algunas hierbas se asemejan, es importante que puedas diferenciarlas para evitar accidentes";
 
 function main () {
     let hierbaIdentificada = "hierba no hay";
@@ -26,8 +26,7 @@ function main () {
         console.log("\n\n*** Revisión de planta adquirida ***\n");
         console.log("Hierba presentada: " + hierbaIdentificada);
         console.log("\n" + RECOMENDACION);
-    }
-    
+    };    
 };
 
 main();

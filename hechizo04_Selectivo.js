@@ -9,13 +9,13 @@ function main() {
     console.log("ingrese su edad actual: ");
     edadActual = Number(leer());
 
-    añosDiferencia = (EDAD_MINIMA - edadActual);
-
     if(edadActual >= EDAD_MINIMA) {
         console.log("\n\n*** VERIFICACION DE COMPRA ***\n");
         console.log("Edad: "+ edadActual + " años");
         console.log("Busquemos una varita! Alguna te puede estar esperando desde hace tiempo!")
 }   else {
+        añosDiferencia = (EDAD_MINIMA - edadActual);
+        
         console.log("\n\n*** VERIFICACION DE COMPRA ***\n");
         console.log("Edad: "+ edadActual);
         console.log("\nVolvé en " + añosDiferencia + " años!");
