@@ -23,3 +23,5 @@ Hechizo 08: pide el codigo de identificacion de un tipo de nucleo, e identifica 
 
 Hechizo 09: pide el codigo para seleccionar el nivel y luego el codigo para seleccionar un hechizo especifico.
 Mejora optimizada y modularizada.
+
+Hechizo 10: examinador de hechizos. pide al aprendiz que diga su hechizo correctamente, da 3 intentos.
