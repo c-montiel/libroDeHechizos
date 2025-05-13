@@ -12,6 +12,8 @@ function main() {
     let hechizoIngresado = "sin seleccion";
     console.log("Bienvenido a la clase de encantamientos\nComo estudiante debes demostrar tu habilidad para recordar y lanzar los hechizos correctamente.\nO habrá consecuencias! ");
 
+    console.log("\n*** Iniciar simulacion ***\n");
+
     for (let i = 0; i < CANT_INTENTOS; i++) {
         console.log("Elige bien tus palabras...\nLanza tu hechizo!: \n");
         hechizoIngresado = leer().toUpperCase();
@@ -19,12 +21,11 @@ function main() {
         if (hechizoIngresado == HECHIZO_01||hechizoIngresado == HECHIZO_02||hechizoIngresado == HECHIZO_03||hechizoIngresado == HECHIZO_04||hechizoIngresado == HECHIZO_05) {
             console.log("Correcto! Gran Hechizo!");
             i = CANT_INTENTOS;            
-        } else if (i == CANT_INTENTOS-1) {
+        } else if (i === CANT_INTENTOS-1) {
             console.log("\nFallaste!\nEres una decepciòn");
         } else {
             console.log("\nIncorrecto!\nVuelve a intentar!: ");
         }
-        console.log("*** Iniciar simulacion ***\n");
         console.log(hechizoIngresado,"\nIntentos restantes: ",CANT_INTENTOS - i);
         console.log("\n*** Fin simulacion ***\n");
     }
