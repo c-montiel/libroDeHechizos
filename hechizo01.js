@@ -30,9 +30,7 @@ function main() {
     console.log("Escarabajos de Ojos de Tigre: " + cantidadEscarabajos);
     console.log("Raíces de Mandrágora: " + cantidadMandragora);
     console.log("Total de ingredientes: " + totalIngredientes);
-    console.log("\n##################################");
-    
-
+    console.log("\n##################################")
 }
 
 main();

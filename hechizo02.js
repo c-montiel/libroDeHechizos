@@ -9,7 +9,6 @@ const MULTIPLICADOR_LIBROS = 2;
  * @param {number} cantidadLibros - Cantidad de libros que se necesitan.
  * @returns {number} El total de materiales necesarios.
  */
-
 function calculoMateriales (cantVaritas,cantidadLibros) {
     return ((cantVaritas*MULTIPLICADOR_VARITAS) + (cantidadLibros*MULTIPLICADOR_LIBROS));
 }
@@ -23,7 +22,6 @@ function calculoMateriales (cantVaritas,cantidadLibros) {
  * 
  * @returns {void} No devuelve nada.
  */
-
 function main(){
     // variables definidas e inicializadas
     let cantidadEstudiantes = 0;
@@ -33,17 +31,15 @@ function main(){
 
     // pedir datos al usuario
     console.log("Bienvenido! vamos a calcular la cantidad de materiales necesarios para esta clase");
-
     console.log("ingrese la cantidad de estudiantes: ");
     cantidadEstudiantes = Number(leer());
     console.log("ingrese la cantidad de estudiantes con varita: ");
     cantidadVaritas = Number(leer());
     console.log("ingrese la cantidad de libros: ");
     cantidadLibros = Number(leer());
-
+    
     // calcular total de materiales con funcion piola
     totalMateriales = calculoMateriales(cantidadVaritas, cantidadLibros);
-
 
     console.log("\n\n#### Resumen de materiales ####\n");
     console.log("Estudiantes: " + cantidadEstudiantes);
@@ -51,7 +47,6 @@ function main(){
     console.log("Cantidad de libros: " + cantidadLibros+"\n");
     console.log("Total de materiales: " + totalMateriales);
     console.log("\n################################");
-
 };
 
 main();

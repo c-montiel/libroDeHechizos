@@ -23,11 +23,9 @@ function main () {
     if (puntuacionExamen >= PUNTAJE_INGRESO_CASA01) {
         console.log("\n\n*** Casa asignada ***\n");
         console.log("resultado de examen : " + puntuacionExamen + "\n" + SALUDO_INGRESO_CASA01);    
-        
     } else if (puntuacionExamen >= PUNTAJE_INGRESO_CASA02) {
         console.log("\n\n*** Casa asignada ***\n");
         console.log("resultado de examen : " + puntuacionExamen + "\n" + SALUDO_INGRESO_CASA02);   
-        
     } else if (puntuacionExamen >= PUNTAJE_INGRESO_CASA03) {
         console.log("\n\n*** Casa asignada ***\n");
         console.log("resultado de examen : " + puntuacionExamen + "\n" + SALUDO_INGRESO_CASA03);  

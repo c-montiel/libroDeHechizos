@@ -3,6 +3,7 @@ const leer = require("prompt-sync")();
 const MIN_GR_INGREDIENTE = 5;
 const MAX_GR_INGREDIENTE = 10;
 const TIEMPO_EMPLEADO = 3;
+
 /**
  * Comprueba si una poción es apta para el consumo.
  * 
@@ -13,7 +14,6 @@ const TIEMPO_EMPLEADO = 3;
  * 
  * @returns {void} No devuelve nada.
  */
-
 function main() {
     // variables definidas e inicializadas
     let gramosIngredientePpal = 0;
@@ -24,7 +24,6 @@ function main() {
 
     //solicitar datos al usuario
     console.log("Bienvenido Aprendiz! Vamos comprobar que su pocion es apta para el consumo.");
-
     console.log("ingresa la cantidad de gramos del ingrediente principal: ");
     gramosIngredientePpal = Number(leer());
 
@@ -42,12 +41,6 @@ function main() {
     console.log("tiempo de preparación exacto: " + tiempoCorrecto);
     console.log("Apto para el consumo: " + aptoConsumo);
     console.log("\n##################################");
-
-
 }
 
 main();
-
-function newFunction() {
-    return 3;
-}

@@ -43,7 +43,7 @@ function main () {
         default:
             mensajeSalida(pocionConsultada,DEFINICION_NULA);
             break;
-    }
+    };
 };
 
 main();
