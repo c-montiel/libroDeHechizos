@@ -26,7 +26,7 @@ function main() {
             vidaDementor = (vidaDementor - DANIO_APRENDIZ)
         } else if (i % 2) {
             azar = getRandomInt(100)
-            //            console.log(azar);
+                        console.log("Probabilidad de daño: "+azar +"%");
             if (azar <= 5) {
                 vidaAprendiz = (vidaAprendiz - DANIO_DEMENTOR * 2);
             } else {
@@ -38,12 +38,12 @@ function main() {
 
         if (hechizoLanzado === HECHIZO_02) {
             azar = getRandomInt(10)
-            //            console.log(azar);
+                        console.log("Probabilidad de daño: "+azar+"%");
             if (azar <= 7) {
                 vidaDementor = (vidaDementor - (DANIO_APRENDIZ * 2))
             } else if (i % 2) {
                 azar = getRandomInt(100)
-                //            console.log(azar);
+                            console.log("Probabilidad de daño: "+azar+"%");
                 if (azar <= 5) {
                     vidaAprendiz = (vidaAprendiz - DANIO_DEMENTOR * 2);
                 } else {
@@ -67,9 +67,11 @@ function main() {
                 console.log("\nFuiste Derrotado!");
             };
 
-            console.log("\n\n*** Fin de Simulación ***\n");
+            
         };
     };
+    
+    console.log("\n\n*** Fin de Simulación ***\n");
 };
 
 main();
