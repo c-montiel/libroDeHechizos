@@ -25,3 +25,5 @@ Hechizo 09: pide el codigo para seleccionar el nivel y luego el codigo para sele
 Mejora optimizada y modularizada.
 
 Hechizo 10: examinador de hechizos. pide al aprendiz que diga su hechizo correctamente, da 3 intentos.
+
+Hechizo 11: simulador de hechizo de defensa contra dementor. pide al aprendiz que lance el hechizo para espantar a un dementor. da una cantidad de intentos limitada, resta puntos de vida al dementor si el hechizo es correcto o al aprendiz si el hechizo es incorrecto.
