@@ -27,3 +27,4 @@ Mejora optimizada y modularizada.
 Hechizo 10: examinador de hechizos. pide al aprendiz que diga su hechizo correctamente, da 3 intentos.
 
 Hechizo 11: simulador de hechizo de defensa contra dementor. pide al aprendiz que lance el hechizo para espantar a un dementor. da una cantidad de intentos limitada, resta puntos de vida al dementor si el hechizo es correcto o al aprendiz si el hechizo es incorrecto.
+Agregado de Dificultad extra, con doble puntaje en segundo hechizo con probabilidad de 70% de fallo y Daño del Dementor cada 2 disparos con doble de daño y probabilidad de 5 % de acierto.
