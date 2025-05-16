@@ -19,6 +19,7 @@ function main() {
     for (let i = 0; i < CANT_TURNOS; i++) {
         console.log("\nIntentos restantes: ", (CANT_TURNOS - i));
         console.log("\nEstudiante: ", vidaAprendiz, "\t/ Dementor: ", vidaDementor);
+        console.log("\n-----------------\n",)
         console.log("\nLanza el Hechizo!:");
         hechizoLanzado = leer();
 
@@ -26,8 +27,8 @@ function main() {
             vidaDementor = (vidaDementor - DANIO_APRENDIZ)
         } else if (i % 2) {
             azar = getRandomInt(100)
-                        console.log("\nProbabilidad de daño: "+azar +"%");
-            if (azar <= 5) {
+            console.log("\nProbabilidad de daño extra del ataque del Dementor: " + azar + "%");
+            if (azar >= 95) {
                 vidaAprendiz = (vidaAprendiz - DANIO_DEMENTOR * 2);
             } else {
                 vidaAprendiz = (vidaAprendiz - DANIO_DEMENTOR);
@@ -37,52 +38,49 @@ function main() {
         };
 
         if (hechizoLanzado === HECHIZO_02) {
-            azar = getRandomInt(10)
-                        console.log("\nProbabilidad de daño: "+azar+"%");
-            if (azar <= 7) {
+            azar = getRandomInt(100)
+            console.log("\nProbabilidad de daño extra del Aprendiz: " + azar + "%");
+            if (azar >= 30) {
                 vidaDementor = (vidaDementor - (DANIO_APRENDIZ * 2))
             } else if (i % 2) {
                 azar = getRandomInt(100)
-                            console.log("\nProbabilidad de daño: "+azar+"%");
-                if (azar <= 5) {
+                console.log("\nProbabilidad de daño extra del ataque del Dementor: " + azar + "%");
+                if (azar >= 95) {
                     vidaAprendiz = (vidaAprendiz - DANIO_DEMENTOR * 2);
                 } else {
                     vidaAprendiz = (vidaAprendiz - DANIO_DEMENTOR);
                 }
             } else {
                 vidaAprendiz = (vidaAprendiz - DANIO_DEMENTOR);
-            };
+            }
+        };
 
             if (vidaDementor < DANIO_APRENDIZ || vidaAprendiz < DANIO_DEMENTOR) {
                 i = CANT_TURNOS - 1;
             } else {
-                console.log("lanza de nuevo!: ");
+                console.log("\nlanza de nuevo!");
             };
 
             if (vidaDementor < DANIO_APRENDIZ) {
                 console.log("\nLo lograste! Espantaste al Dementor!");
+                console.log("\n\n*** Fin de Simulación ***\n");
             };
 
             if (vidaAprendiz < DANIO_DEMENTOR && CANT_TURNOS - 1) {
                 console.log("\nFuiste Derrotado!");
+                console.log("\n\n*** Fin de Simulación ***\n");
             };
-
-            
-        };
+        
     };
-    
-    console.log("\n\n*** Fin de Simulación ***\n");
 };
 
 main();
 
 /**
  * funcion getrandomint usada para generar numero aleatorio
- *
  * @param {*} max
  * @return {*} 
  */
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 };
-
