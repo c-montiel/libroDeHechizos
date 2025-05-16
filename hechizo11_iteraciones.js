@@ -55,7 +55,7 @@ function main() {
             }
         };
 
-            if (vidaDementor < DANIO_APRENDIZ || vidaAprendiz < DANIO_DEMENTOR) {
+            if (vidaDementor <=0 || vidaAprendiz <= 0) {
                 i = CANT_TURNOS - 1;
             } else {
                 console.log("\nlanza de nuevo!");
@@ -66,7 +66,7 @@ function main() {
                 console.log("\n\n*** Fin de Simulación ***\n");
             };
 
-            if (vidaAprendiz < DANIO_DEMENTOR && CANT_TURNOS - 1) {
+            if (vidaAprendiz < DANIO_DEMENTOR) {
                 console.log("\nFuiste Derrotado!");
                 console.log("\n\n*** Fin de Simulación ***\n");
             };
