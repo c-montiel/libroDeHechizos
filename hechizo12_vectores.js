@@ -7,10 +7,10 @@ const INGREDIENTE_04_FORMAT = "4 - Ojo de escarabajo";
 const INGREDIENTE_05_FORMAT = "5 - Sangre de dragón";
 
 const INGREDIENTE_01 = "Raíz de valeriana";
-const INGREDIENTE_02 = "Mandrágora negra";
+//const INGREDIENTE_02 = "Mandrágora negra";
 const INGREDIENTE_03 = "Pluma de hipogrifo";
 const INGREDIENTE_04 = "Ojo de escarabajo";
-const INGREDIENTE_05 = "Sangre de dragón";
+//const INGREDIENTE_05 = "Sangre de dragón";
 
 const INGREDIENTES_ENCONTRADOS = [];
 
@@ -54,18 +54,23 @@ function main() {
     };
 
     console.log("\n\n*** FIN DE RECOLECCION ***");
-    console.log("\Informe de Ingredientes encontrados: ");
-
+    console.log("\nInforme de Ingredientes encontrados: ");
     console.log("\n\t" + INGREDIENTES_ENCONTRADOS);
     resultadoRecoleccion(INGREDIENTES_ENCONTRADOS)
+    console.log("\n********************");
 };
 
 main();
 
-function resultadoRecoleccion(INGREDIENTES_ENCONTRADOS) { 
-    if (INGREDIENTES_ENCONTRADOS.length >= 2) {
+/**
+ * funcion que recibe como parametro el arreglo y evalua la cantidad de elementos aceptados
+ *
+ * @param {*} ingredientes arreglo que recibe los ingredientes aceptados
+ */
+function resultadoRecoleccion(ingredientes) { 
+    if (ingredientes.length >= 2) {
         console.log("\nResultado: Aprobado");
     } else {
         console.log("\nResultado: Reprobado");
     };
-    };
+};
