@@ -48,7 +48,6 @@ function main() {
                 break;
             default:
                 console.log("\nLa opcion seleccionada no es válida");
-                
                 break;
         };
     };
