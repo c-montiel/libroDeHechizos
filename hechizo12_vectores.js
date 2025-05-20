@@ -7,10 +7,10 @@ const INGREDIENTES_ENCONTRADOS = [];
 function main() {
     let ingredienteEncontrado = "";
 
-    for (let i = 0; i < 3; i++) {
-        console.log("\n*** Iniciando recoleccion ***");
+    console.log("\n*** Iniciando recoleccion ***");
 
-        ingredienteEncontrado = getRandomInt(INGREDIENTES_FORMAT.length)
+    for (let i = 0; i < 3; i++) {
+        ingredienteEncontrado = getRandomInt(INGREDIENTES_FORMAT.length-1)
 
         switch (ingredienteEncontrado) {
             case 1:
