@@ -31,3 +31,5 @@ Agregado de Dificultad extra, con doble puntaje en segundo hechizo con probabili
 
 Hechizo 12: evaluador de recoleccion de hierbas para pociones.
 (extras pendientes). extra 1: muestra los ingredientes hallados en orden alfabetico.
+
+Hechizo 12 Extras: simulador de recoleccion de hierbas con extras. selecciona automaticamente y muestra el resultado en orden alfabetico.
