@@ -7,10 +7,8 @@ const INGREDIENTE_04_FORMAT = "4 - Ojo de escarabajo";
 const INGREDIENTE_05_FORMAT = "5 - Sangre de dragón";
 
 const INGREDIENTE_01 = "Raíz de valeriana";
-//const INGREDIENTE_02 = "Mandrágora negra";
 const INGREDIENTE_03 = "Pluma de hipogrifo";
 const INGREDIENTE_04 = "Ojo de escarabajo";
-//const INGREDIENTE_05 = "Sangre de dragón";
 
 const INGREDIENTES_ENCONTRADOS = [];
 
@@ -49,13 +47,15 @@ function main() {
                 console.log("\nIngrediente NO ACEPTADO! Cuidado!");
                 break;
             default:
+                console.log("\nLa opcion seleccionada no es válida");
+                
                 break;
         };
     };
 
     console.log("\n\n*** FIN DE RECOLECCION ***");
     console.log("\nInforme de Ingredientes encontrados: ");
-    console.log("\n\t" + INGREDIENTES_ENCONTRADOS);
+    console.log("\n\t" + INGREDIENTES_ENCONTRADOS.sort());
     resultadoRecoleccion(INGREDIENTES_ENCONTRADOS)
     console.log("\n********************");
 };

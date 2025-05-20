@@ -30,4 +30,4 @@ Hechizo 11: simulador de hechizo de defensa contra dementor. pide al aprendiz qu
 Agregado de Dificultad extra, con doble puntaje en segundo hechizo con probabilidad de 70% de fallo y Daño del Dementor cada 2 disparos con doble de daño y probabilidad de 5 % de acierto.
 
 Hechizo 12: evaluador de recoleccion de hierbas para pociones.
-(extras pendientes).
+(extras pendientes). extra 1: muestra los ingredientes hallados en orden alfabetico.
