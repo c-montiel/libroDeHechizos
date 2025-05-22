@@ -18,18 +18,18 @@ function main() {
 
         switch (ingredienteEncontrado) {
             case 0:
-                INGREDIENTES_ENCONTRADOS.push(INGREDIENTES[0]);
+                ingredientesEncontrados.push(INGREDIENTES[0]);
                 console.log("\n"+INGREDIENTES[0]+". Ingrediente ACEPTADO!");
                 break;
             case 1:
                 console.log("\n"+INGREDIENTES[3]+". Ingrediente NO ACEPTADO! Cuidado!");
                 break;
             case 2:
-                INGREDIENTES_ENCONTRADOS.push(INGREDIENTES[1]);
+                ingredientesEncontrados.push(INGREDIENTES[1]);
                 console.log("\n"+INGREDIENTES[1]+". Ingrediente ACEPTADO!");
                 break;
             case 3:
-                INGREDIENTES_ENCONTRADOS.push(INGREDIENTES[2]);
+                ingredientesEncontrados.push(INGREDIENTES[2]);
                 console.log("\n"+INGREDIENTES[2]+". Ingrediente ACEPTADO!");
                 break;
             case 4:
@@ -43,8 +43,8 @@ function main() {
 
     console.log("\n\n*** FIN DE RECOLECCION ***");
     console.log("\nInforme de Ingredientes encontrados: ");
-    console.log("\n\t" + INGREDIENTES_ENCONTRADOS.sort());
-    resultadoRecoleccion(INGREDIENTES_ENCONTRADOS)
+    console.log("\n\t" + ingredientesEncontrados.sort());
+    resultadoRecoleccion(ingredientesEncontrados)
     console.log("\n********************");
 };
 

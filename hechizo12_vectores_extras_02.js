@@ -1,11 +1,11 @@
-const INGREDIENTES = [
+const ingredientes = [
     "Raíz de valeriana",
     "Mandrágora negra",
     "Pluma de hipogrifo",
     "Ojo de escarabajo",
     "Sangre de dragón"
 ];
-const INGREDIENTES_VALIDOS = [
+const ingredientesValidos = [
     true,
     false,
     true,
@@ -13,18 +13,18 @@ const INGREDIENTES_VALIDOS = [
     false
 ];
 const INTENTOS = 3;
-const INGREDIENTES_ENCONTRADOS = [];
+const ingredientesEncontrados = [];
 
 function main() {
     console.log("\n*** Iniciando recolección ***");
 
     for (let i = 0; i < INTENTOS; i++) {
-        let indiceIngrediente = getRandomInt(INGREDIENTES.length - 1);
-        let nombreIngrediente = INGREDIENTES[indiceIngrediente];
-        let ingredienteValido = INGREDIENTES_VALIDOS[indiceIngrediente];
+        let indiceIngrediente = getRandomInt(ingredientes.length - 1);
+        let nombreIngrediente = ingredientes[indiceIngrediente];
+        let ingredienteValido = ingredientesValidos[indiceIngrediente];
 
         if (ingredienteValido) {
-            INGREDIENTES_ENCONTRADOS.push(nombreIngrediente);
+            ingredientesEncontrados.push(nombreIngrediente);
             console.log("\n"+nombreIngrediente+". Ingrediente ACEPTADO!");
         } else {
             console.log("\n"+nombreIngrediente+". Ingrediente NO ACEPTADO! Cuidado!");
@@ -33,13 +33,13 @@ function main() {
 
     console.log("\n\n*** FIN DE RECOLECCIÓN ***");
     console.log("\nInforme de ingredientes encontrados:");
-    console.log("\n\t" + INGREDIENTES_ENCONTRADOS.sort().join(", "));
-    console.log("\nResultado: " + resultadoRecoleccion(INGREDIENTES_ENCONTRADOS));
+    console.log("\n\t" + ingredientesEncontrados.sort().join(", "));
+    console.log("\nResultado: " + resultadoRecoleccion(ingredientesEncontrados));
     console.log("\n********************");
 }
 
-function resultadoRecoleccion(ingredientes) {
-    if (ingredientes.length >= 2) {
+function resultadoRecoleccion(ingredientesAprobados) {
+    if (ingredientesAprobados.length >= 2) {
         return "Aprobado"
     } else {
         return "Reprobado"
