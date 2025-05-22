@@ -1,6 +1,10 @@
-const INGREDIENTES_FORMAT = ["1 - Raíz de valeriana", "2 - Mandrágora negra", "3 - Pluma de hipogrifo", "4 - Ojo de escarabajo", "5 - Sangre de dragón"];
-
-const INGREDIENTES = ["Raíz de valeriana","Pluma de hipogrifo","Ojo de escarabajo", "Mandrágora negra", "Sangre de dragón"];
+const INGREDIENTES = [
+    "Raíz de valeriana",
+    "Pluma de hipogrifo",
+    "Ojo de escarabajo",
+    "Mandrágora negra",
+    "Sangre de dragón"
+];
 
 const INGREDIENTES_ENCONTRADOS = [];
 
@@ -10,25 +14,25 @@ function main() {
     console.log("\n*** Iniciando recoleccion ***");
 
     for (let i = 0; i < 3; i++) {
-        ingredienteEncontrado = getRandomInt(INGREDIENTES_FORMAT.length-1)
+        ingredienteEncontrado = getRandomInt(INGREDIENTES.length-1)
 
         switch (ingredienteEncontrado) {
-            case 1:
+            case 0:
                 INGREDIENTES_ENCONTRADOS.push(INGREDIENTES[0]);
                 console.log("\n"+INGREDIENTES[0]+". Ingrediente ACEPTADO!");
                 break;
-            case 2:
+            case 1:
                 console.log("\n"+INGREDIENTES[3]+". Ingrediente NO ACEPTADO! Cuidado!");
                 break;
-            case 3:
+            case 2:
                 INGREDIENTES_ENCONTRADOS.push(INGREDIENTES[1]);
                 console.log("\n"+INGREDIENTES[1]+". Ingrediente ACEPTADO!");
                 break;
-            case 4:
+            case 3:
                 INGREDIENTES_ENCONTRADOS.push(INGREDIENTES[2]);
                 console.log("\n"+INGREDIENTES[2]+". Ingrediente ACEPTADO!");
                 break;
-            case 5:
+            case 4:
                 console.log("\n"+INGREDIENTES[4]+". Ingrediente NO ACEPTADO! Cuidado!");
                 break;
             default:
@@ -60,11 +64,11 @@ function resultadoRecoleccion(ingredientes) {
 };
 
 /**
- * funcion de seleccion aleatoria de un elemento del array de ingredientes
+ * funcion de generacion de numero aleatorio
  *
- * @param {*} max
- * @return {*} 
+ * @param {*} max valor maximo incluido
+ * @return {*} devuelve un numero aleatorio entre 0 y el maximo
  */
 function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
+    return Math.floor(Math.random() * (max + 1));
 };
