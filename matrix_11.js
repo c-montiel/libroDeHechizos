@@ -2,7 +2,7 @@ const leer = require('prompt-sync')();
 
 const diasMenu = ["L", "M", "Mi", "J", "V", "S", "D"];
 const diasSemana = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"];
-const tareasPendientes = ["lavar la ropa", "ordenar el cuarto", "practicar programacion", "regar las plantas"]
+const tareasPendientes = ["lavar la ropa", "ordenar el cuarto", "practicar programacion", "regar las plantas"];
 const tareasDiarias = [
     [],
     [],
@@ -17,7 +17,6 @@ function main() {
     let diaSeleccionado = "";
     let indice = "";
     let cantidadTareas = 0;
-
 
     console.log("selecciones el día para agregar tareas: " + diasMenu); //muestra las iniciales de los dias de la semana
     diaSeleccionado = leer();
