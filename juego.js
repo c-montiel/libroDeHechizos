@@ -43,8 +43,8 @@ const juego = {
 function main() {
 
     function mostrarTablero(tablero) {
-        for (let i = 0; i < tablero.length; i++) {
-            console.log(tablero[i]);
+        for (let fila of tablero) {
+            console.log(fila.join(" "));
         }
     }
 
