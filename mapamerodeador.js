@@ -21,8 +21,8 @@ const Harry = {
 
 const Scamander = {
     caracter: "S",
-    posX: getRandomIntInclusive(0, 7),
-    posY: getRandomIntInclusive(0, 7)
+    posX: getRandomIntInclusive(0, 9),
+    posY: getRandomIntInclusive(0, 9)
 };
 
 const MENSAJE_INICIO = "Juro solemnemente que mis intensiones son malas\n";
@@ -36,32 +36,45 @@ function main() {
     let instruccion = 0;
     console.log(MENSAJE_INICIO);
 
-    posicionarPersonaje(Harry.posX, Harry.posY, Harry.caracter);
-    posicionarPersonaje(Scamander.posX, Scamander.posY, Scamander.caracter);
-    tablero();
+    while (instruccion != MENSAJE_FIN) {
+        posicionarPersonaje(Harry.posX, Harry.posY, Harry.caracter);
+        posicionarPersonaje(Scamander.posX, Scamander.posY, Scamander.caracter);
+        tablero();
 
-    console.log("\nrealice el movimiento con cualquier tecla\n");
-    instruccion = leer();
+        console.log("\nrealice el movimiento con cualquier tecla\n");
+        instruccion = leer();
 
-    if (instruccion) {
-        moverPersonaje(Harry);
-        moverPersonaje(Scamander);
-        tablero()
+
+        if (instruccion) {
+            moverPersonaje(Harry);
+            moverPersonaje(Scamander);
+            tablero()
+        }
+
+        if (instruccion == MENSAJE_FIN) {
+            console.log(MENSAJE_FIN)
+        };
     }
-
-    if (instruccion == MENSAJE_FIN) {
-        console.log(MENSAJE_FIN)
-        return
-    };
 };
 
-// funciones de uso
+/**
+ * muestra la matriz del tablero de juego
+ *
+ */
 function tablero() {
+    console.clear()
+
     for (let fila of tableroMapa) {
         console.log(fila.join("  "));
     }
 };
-
+/**
+ * muestra un objeto en el tablero
+ *
+ * @param {*} posX eje vertical
+ * @param {*} posY eje horizontal
+ * @param {*} caracter simbolo del personaje
+ */
 function posicionarPersonaje(posX, posY, caracter) {
     tableroMapa[posX][posY] = caracter;
 };

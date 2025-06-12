@@ -68,35 +68,7 @@ function dibujarTablero() {
     }
 }
 
-// Función para mover al jugador
-function moverJugador(direccion) {
-    switch (direccion) {
-        case 'w': // Arriba
-            if (jugador.posY > 0) jugador.posY--;
-            break;
-        case 'a': // Izquierda
-            if (jugador.posX > 0) jugador.posX--;
-            break;
-        case 's': // Abajo
-            if (jugador.posY < tablero.length - 1) jugador.posY++;
-            break;
-        case 'd': // Derecha
-            if (jugador.posX < tablero[0].length - 1) jugador.posX++;
-            break;
-        case 'q': // Arriba izquierda
-            if (jugador.posX > 0 && jugador.posY > 0) { jugador.posX--; jugador.posY--; }
-            break;
-        case 'e': // Arriba derecha
-            if (jugador.posX < tablero[0].length - 1 && jugador.posY > 0) { jugador.posX++; jugador.posY--; }
-            break;
-        case 'z': // Abajo izquierda
-            if (jugador.posX > 0 && jugador.posY < tablero.length - 1) { jugador.posX--; jugador.posY++; }
-            break;
-        case 'c': // Abajo derecha
-            if (jugador.posX < tablero[0].length - 1 && jugador.posY < tablero.length - 1) { jugador.posX++; jugador.posY++; }
-            break;
-    }
-}
+
 
 // Función para mover al alien
 function moverAlien() {
