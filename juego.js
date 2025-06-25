@@ -25,7 +25,7 @@ const alien = {
     posX: 5,
     posY: 3,
     direccionX: 1,
-    modo: "patrulla"
+    modo: "buscar"
 };
 
 const salida = {
@@ -38,7 +38,8 @@ const salida = {
 };
 
 const compuerta = {
-    caracter: "C",
+    caracter: "c",
+    caracterActivo: "C",
     posX: 5,
     posY: 9,
     turnos: 0,
@@ -47,7 +48,7 @@ const compuerta = {
 
 
 function main() {
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 20; i++) {
 
         posicionarPersonaje(salida.posX, salida.posY, salida.caracter);
         posicionarPersonaje(compuerta.posX, compuerta.posY, compuerta.caracter);
@@ -73,17 +74,12 @@ function main() {
 
             if (compuerta.turnos >= 3) {
                 compuerta.activa = true;
+                alien.modo = "perseguir"
                 console.log("compuerta activada");
                 console.log("CORRE!!!!");
-
-
-
             }
-
         }
-
     };
-
 
 };
 
@@ -118,16 +114,16 @@ function moverJugador(direccion) {
             if (jugador.posY < tableroMapa[0].length - 1) jugador.posY++;
             break;
         case 'q': // Arriba izquierda
-            if (jugador.posX > 0 && jugador.posY > 0) { jugador.posX--; jugador.posY--; }
+            if (jugador.posX > 0 && jugador.posY > 0) { jugador.posX - 2; jugador.posY - 2; }
             break;
         case 'e': // Arriba derecha
-            if (jugador.posX > 0 && jugador.posY < tableroMapa[0].length - 1) { jugador.posX--; jugador.posY++; }
+            if (jugador.posX > 0 && jugador.posY < tableroMapa[0].length - 1) { jugador.posX - 2; jugador.posY + 2; }
             break;
         case 'z': // Abajo izquierda
-            if (jugador.posX > 0 && jugador.posY < tableroMapa.length - 1) { jugador.posX++; jugador.posY--; }
+            if (jugador.posX > 0 && jugador.posY < tableroMapa.length - 1) { jugador.posX + 2; jugador.posY - 2; }
             break;
         case 'c': // Abajo derecha
-            if (jugador.posX < tableroMapa[0].length - 1 && jugador.posY < tableroMapa.length - 1) { jugador.posX++; jugador.posY++; }
+            if (jugador.posX < tableroMapa[0].length - 1 && jugador.posY < tableroMapa.length - 1) { jugador.posX + 2; jugador.posY + 2; }
             break;
     }
     // muestra de nuevo el tablero actualizado
@@ -135,20 +131,29 @@ function moverJugador(direccion) {
 
 }
 
-
+/**
+ * posiciona al objeto alien
+ * @param {*} modo 
+ */
 function movimientoAlien(modo) {
     tableroMapa[alien.posX][alien.posY] = ".";
 
     switch (modo) {
-        case "patrulla":
+        case "buscar":
             alien.posX += alien.direccionX;
             if (alien.posX <= 0 || alien.posX >= tableroMapa.length - 1) {
                 alien.direccionX *= (-1);
-
             }
             break;
-        case "compuertaActiva":
-            alien.posY += 3;
+
+        case "perseguir":
+            if (alien.posX < jugador.posX) alien.posX++;
+            else if (alien.posX > jugador.posX) alien.posX--;
+
+            if (alien.posY < jugador.posY) alien.posY++;
+            else if (alien.posY > jugador.posY) alien.posY--;
+
+            break;
     }
 }
 main();
